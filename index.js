@@ -6,11 +6,9 @@ const record = [
   ]
  
   function superbowlWin(record){
-    for(const list of record){
-      if (list.result==="W"){
-        return list.year
-      }
+    let myRecord = record.find((superBowl) => superBowl.result === "W");
+    if (myRecord) {
+      return myRecord.year;
     }
-      return undefined;
+    return undefined;
   }
-  console.log(superbowlWin(record));
